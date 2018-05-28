@@ -1,0 +1,6 @@
+
+
+int determinant(int**, int);
+
+
+
