@@ -114,9 +114,10 @@ state Board::gameState() // Returns X_WON, O_WON, DRAW, UNFINISHED (or 0, 1, 2, 
 // Function that visibly prints the current Board over three lines
 void Board::print()
 {
-	std::cout << grid[0][0] << "   |" << grid[0][1] << "  |" << grid[0][2] << std::endl;
-    std::cout << " ---|---|--- " << std::endl ;
-	std::cout << grid[1][0] << "   |" << grid[1][1] << "  |" << grid[1][2] << std::endl;
-    std::cout << " ---|---|--- " << std::endl ;
-	std::cout << grid[2][0] << "   |" << grid[2][1] << "  |" << grid[2][2] << std::endl;
+	std::cout << std::endl;
+	std::cout << grid[0][0] << "  | " << grid[0][1] << " | " << grid[0][2] << std::endl;
+    std::cout << "---|---|--- " << std::endl ;
+	std::cout << grid[1][0] << "  | " << grid[1][1] << " | " << grid[1][2] << std::endl;
+    std::cout << "---|---|--- " << std::endl ;
+	std::cout << grid[2][0] << "  | " << grid[2][1] << " | " << grid[2][2] << std::endl;
 }
