@@ -13,7 +13,7 @@ Board::Board()
 	{
 		for (int columns = 0; columns < 3; columns++)
 		{
-			grid[rows][columns] = '.';
+			grid[rows][columns] = " ";
 		}
 	}
 
@@ -36,7 +36,7 @@ bool Board::makeMove(int whoseTurn, int coord1, int coord2) // need to add input
 		playerMarker = "O";
 	}
 
-	if (grid[rowChoice][columnChoice] == ".")
+	if (grid[rowChoice][columnChoice] == " ")
 	{
 		grid[rowChoice][columnChoice] = playerMarker;
 		return true;
@@ -101,7 +101,7 @@ state Board::gameState() // Returns X_WON, O_WON, DRAW, UNFINISHED (or 0, 1, 2, 
 		{
 			for (int column = 0; column < 3; column++)
 			{
-				if (grid[row][column] == ".")
+				if (grid[row][column] == " ")
 					return UNFINISHED;
 			}
 		}
@@ -114,7 +114,9 @@ state Board::gameState() // Returns X_WON, O_WON, DRAW, UNFINISHED (or 0, 1, 2, 
 // Function that visibly prints the current Board over three lines
 void Board::print()
 {
-	std::cout << grid[0][0] << grid[0][1] << grid[0][2] << std::endl;
-	std::cout << grid[1][0] << grid[1][1] << grid[1][2] << std::endl;
-	std::cout << grid[2][0] << grid[2][1] << grid[2][2] << std::endl;
+	std::cout << grid[0][0] << "   |" << grid[0][1] << "  |" << grid[0][2] << std::endl;
+    std::cout << " ---|---|--- " << std::endl ;
+	std::cout << grid[1][0] << "   |" << grid[1][1] << "  |" << grid[1][2] << std::endl;
+    std::cout << " ---|---|--- " << std::endl ;
+	std::cout << grid[2][0] << "   |" << grid[2][1] << "  |" << grid[2][2] << std::endl;
 }
